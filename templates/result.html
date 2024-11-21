@@ -6,7 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Final Result</h2>
-    <h3> you got  {{result}} with percentage :{{score}}%</h3>
+    <!-- <h2>Final Result</h2>
+    <h3> you got  {{result}} with percentage :{{score}}%</h3> -->
+  
+  <!-- {#% if score>=50 %#}
+  <h3>Your result is passed</h3>
+  {#% else %#}
+  <h3>Your result is failed</h3>
+  {#% endif %#} -->
+
+  <!-- for loop practice  -->
+  <table>
+  {% for key,value in result.items() %}
+  <tr>
+    <th>{{key}}</th>
+    <th>{{value}}</th>
+  </tr>
+  {% endfor %}
+</table>
+
+   
+
+
 </body>
 </html>
