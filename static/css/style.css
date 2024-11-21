@@ -1,0 +1,29 @@
+input[type=submit]{
+    width: 80px;
+    margin: auto;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-sizing: border-box;
+    color: white;
+    background-color: skyblue;
+    padding-left: 100;
+
+
+}
+label{
+    padding-left: 20px ;
+}
+input[type=text]{
+    width: 50px;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: center;
+
+    
+
+}
+*{
+    align-items: center;
+}
