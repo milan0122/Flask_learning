@@ -18,18 +18,20 @@ my_cursor = mydb.cursor()
 #     print(db)
 
 #create tables 
-create_table_query = """
-Create table if not exists attendance(
-id int auto_increment primary key,
-name varchar(100) not null,
-timestamp datetime not null
-)
-"""
+# create_table_query = """
+# Create table if not exists attendance(
+# id int auto_increment primary key,
+# name varchar(100) not null,
+# timestamp datetime not null
+# )
+# """
 #execute
+#Delete table records
+query = "DELETE FROM attendance"
 
 try:
-    my_cursor.execute(create_table_query)
-    print("table created")
+    my_cursor.execute(query)
+    print("table delted")
 
 except pymysql.MySQLError as e:
     print(f'Error: {e}')

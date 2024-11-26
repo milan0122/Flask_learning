@@ -16,9 +16,16 @@
 
     <!-- Form to Add New Attendance Record -->
     <h2>Add New Attendance</h2>
-    <form action="/add" method="POST">
+    <form action="/add" method="POST" enctype="multipart/form-data">
         <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="name" name="name" required></br>
+        <br>
+        <label for="image">Upload photo</label>
+        <input type="file" name="file">
+    </br>
+    <br>
+        <label for="image">Upload photo</label>
+        <input type="file" name="file">
         <button type="submit">Add Attendance</button>
     </form>
 
@@ -31,12 +38,13 @@
         <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Timestamp</th>
+            <th>Entry Time</th>
         </tr>
+        {% for record in attendance %}
         <tr>
-            <td>{{ record[0] }}</td>
-            <td>{{ record[1] }}</td>
-            <td>{{ record[2] }}</td>
+            <td>{{record[0]}}</th>
+            <td>{{record[1]}}</th>
+            <td>{{record[2]}}</th>
         </tr>
         {% endfor %}
     </table>
